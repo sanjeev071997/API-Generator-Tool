@@ -10,8 +10,8 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.use(cors({
-  // origin: 'https://freemockapi.netlify.app',
-  origin: 'http://localhost:3000',
+  origin: 'https://freemockapi.netlify.app',
+  // origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
