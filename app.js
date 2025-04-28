@@ -8,12 +8,13 @@ const app = express();
 // Middlewares
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+
 app.use(cors({
-  origin: true,
+  origin: 'https://freemockapi.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
-app.options('*', cors()); 
+
 
 // In-memory database to store endpoints
 const endpoints = new Map();
