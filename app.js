@@ -38,7 +38,9 @@ app.post('/api/generate', (req, res) => {
       accessCount: 0,
     });
 
-    const apiUrl = `${req.protocol}://${req.get('host')}/api/data/${endpointId}`;
+    // const apiUrl = `${req.protocol}://${req.get('host')}/api/data/${endpointId}`;
+
+    const apiUrl = `https://${req.get('host')}/api/data/${endpointId}`;
 
     res.json({
       url: apiUrl,
